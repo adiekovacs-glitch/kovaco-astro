@@ -6,8 +6,8 @@ const entries = await getCollection('success');
 ---
 
 <BaseLayout
-  title="Impact — KovaCo. Consulting"
-  description="Stories from founders and leaders who have worked with KovaCo. Consulting on talent strategy, hiring systems, and senior search."
+  title="Proven Impact & Client Stories | KovaCo. Consulting"
+  description="Read what happens when scaling companies build disciplined hiring infrastructure. Case studies and client testimonials from KovaCo. talent strategy engagements."
 >
 
   <header class="impact-header">
@@ -15,36 +15,55 @@ const entries = await getCollection('success');
       <p class="page-eyebrow">Impact</p>
       <h1 class="impact-heading">What it looks like when it works.</h1>
       <p class="impact-lead">
-        The measure of good hiring work isn't the process — it's what the people
-        and organizations on the other side went on to build.
+        The data behind successful organizational growth isn't measured in positions filled.
+        True impact is found in the operational yield, retention milestones, and permanent
+        hiring capability your team retains long after our engagement concludes.
       </p>
     </div>
   </header>
 
-  <main class="impact-list-section">
-    <div class="impact-list-inner">
-      <ul class="impact-list reveal-group" role="list">
-        {entries.map(entry => (
-          <li class="impact-card">
-            <div class="impact-card__inner">
-              <div class="impact-card__quote-mark" aria-hidden="true">"</div>
-              <blockquote class="impact-card__snippet">
-                {entry.data.snippet}
-              </blockquote>
-              <footer class="impact-card__meta">
-                <p class="impact-card__author">{entry.data.author}</p>
-                <p class="impact-card__role">{entry.data.title}</p>
-                <p class="impact-card__company">{entry.data.company}</p>
-              </footer>
-              <a href={`/impact/${entry.id}`} class="impact-card__cta">
-                Read the full story <span aria-hidden="true">→</span>
-              </a>
+  <main class="impact-feature-section">
+    <div class="impact-feature-inner">
+      {entries.map(entry => (
+        <article class="impact-feature reveal">
+          <div class="impact-feature__quote-mark" aria-hidden="true">"</div>
+          <blockquote class="impact-feature__snippet">
+            {entry.data.snippet}
+          </blockquote>
+          <footer class="impact-feature__footer">
+            <div class="impact-feature__meta">
+              <p class="impact-feature__author">{entry.data.author}</p>
+              <p class="impact-feature__role">{entry.data.title}</p>
+              <p class="impact-feature__company">{entry.data.company}</p>
             </div>
-          </li>
-        ))}
-      </ul>
+            <a href={`/impact/${entry.id}`} class="impact-feature__cta btn-ghost">
+              Read the full story <span aria-hidden="true">→</span>
+            </a>
+          </footer>
+        </article>
+      ))}
     </div>
   </main>
+
+  <!-- CLOSING CTA -->
+  <section class="impact-cta reveal">
+    <div class="impact-cta-inner">
+      <hr class="impact-cta-rule" />
+      <h2 class="impact-cta-heading">Scale with Predictable Infrastructure</h2>
+      <p class="impact-cta-body">
+        We partner with founders to turn talent acquisition from an operational bottleneck
+        into a competitive multiplier. Let's design a framework built for your velocity.
+      </p>
+      <a
+        href="https://calendly.com/hello-kovaco/30min"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
+        Book an intro call <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
 
 </BaseLayout>
 
@@ -72,100 +91,121 @@ const entries = await getCollection('success');
     font-size: 17px;
     line-height: 1.75;
     color: var(--mid);
-    max-width: 54ch;
+    max-width: 58ch;
   }
 
-  /* ─── List ───────────────────────────────────────────────────── */
-  .impact-list-section {
-    padding: 80px 40px 100px;
+  /* ─── Feature testimonial ────────────────────────────────────── */
+  .impact-feature-section {
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--rule);
   }
-  .impact-list-inner {
-    max-width: var(--max);
+  .impact-feature-inner {
+    max-width: 860px;
     margin: 0 auto;
-  }
-  .impact-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr));
-    gap: 2px;
-    list-style: none;
+    gap: 48px;
   }
 
-  /* ─── Card ───────────────────────────────────────────────────── */
-  .impact-card__inner {
+  .impact-feature {
     display: grid;
-    gap: 28px;
-    padding: 52px 48px;
-    background: var(--bg);
+    gap: 32px;
+    padding: 64px 72px;
+    background: var(--color-bg-alt);
     border: 1px solid var(--rule);
-    height: 100%;
+    border-left: 3px solid var(--sage);
   }
 
-  .impact-card__quote-mark {
+  .impact-feature__quote-mark {
     font-family: var(--serif);
-    font-size: 72px;
-    line-height: 0.6;
+    font-size: 96px;
+    line-height: 0.55;
     color: var(--sage);
-    opacity: 0.5;
+    opacity: 0.45;
     user-select: none;
-    align-self: start;
   }
 
-  .impact-card__snippet {
+  .impact-feature__snippet {
     font-family: var(--serif);
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: clamp(20px, 2.5vw, 28px);
     font-weight: 400;
     font-style: italic;
-    line-height: 1.55;
+    line-height: 1.5;
     color: var(--text);
     quotes: none;
+    max-width: 56ch;
   }
 
-  .impact-card__meta {
-    display: grid;
-    gap: 4px;
-    padding-top: 8px;
+  .impact-feature__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 28px;
     border-top: 1px solid var(--rule);
   }
-  .impact-card__author {
-    font-size: 14px;
+
+  .impact-feature__author {
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.04em;
     color: var(--text);
+    margin-bottom: 5px;
   }
-  .impact-card__role {
-    font-size: 13px;
+  .impact-feature__role {
+    font-size: 14px;
     color: var(--mid);
+    margin-bottom: 3px;
   }
-  .impact-card__company {
-    font-size: 12px;
+  .impact-feature__company {
+    font-size: 13px;
     color: var(--sage);
     letter-spacing: 0.03em;
   }
 
-  .impact-card__cta {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 2px;
-    align-self: end;
-    justify-self: start;
-    transition: color 0.2s, border-color 0.2s;
+  .impact-feature__cta { flex-shrink: 0; }
+
+  /* ─── Closing CTA ────────────────────────────────────────────── */
+  .impact-cta {
+    padding: 100px 40px 120px;
   }
-  .impact-card__cta:hover {
-    color: var(--sage);
-    border-color: var(--sage);
+  .impact-cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    justify-items: start;
+  }
+  .impact-cta-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .impact-cta-heading {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .impact-cta-body {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--mid);
+    max-width: 52ch;
   }
 
   /* ─── Responsive ─────────────────────────────────────────────── */
   @media (max-width: 900px) {
-    .impact-header       { padding: 72px 24px 64px; }
-    .impact-list-section { padding: 64px 24px 80px; }
-    .impact-card__inner  { padding: 40px 32px; }
+    .impact-header        { padding: 72px 24px 64px; }
+    .impact-feature-section { padding: 64px 24px 48px; }
+    .impact-feature       { padding: 44px 36px; }
+    .impact-cta           { padding: 72px 24px 80px; }
+    .impact-feature__footer { flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 480px) {
-    .impact-card__inner { padding: 32px 24px; }
+    .impact-feature { padding: 32px 24px; }
   }
 </style>
