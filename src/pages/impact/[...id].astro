@@ -1,0 +1,144 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('success');
+  return entries.map((entry) => ({
+    params: { id: entry.id },
+    props:  { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { author, title, company, snippet } = entry.data;
+---
+
+<BaseLayout
+  title={`${author} — Impact · KovaCo. Consulting`}
+  description={snippet}
+>
+
+  <article class="story-article section">
+
+    <header class="story-header reveal-group">
+      <a href="/impact" class="story-back">← Impact</a>
+      <div class="story-quote-mark" aria-hidden="true">"</div>
+      <blockquote class="story-snippet">{snippet}</blockquote>
+      <div class="story-attribution">
+        <p class="story-author">{author}</p>
+        <p class="story-role">{title}</p>
+        <p class="story-company">{company}</p>
+      </div>
+    </header>
+
+    <hr class="story-rule" />
+
+    <div class="prose reveal">
+      <Content />
+    </div>
+
+    <footer class="story-footer reveal">
+      <hr class="story-rule" />
+      <div class="story-footer-inner">
+        <a href="/impact" class="btn-ghost">← Back to Impact</a>
+        <a
+          href="https://calendly.com/hello-kovaco/30min"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Book an intro call <span class="arrow">→</span>
+        </a>
+      </div>
+    </footer>
+
+  </article>
+
+</BaseLayout>
+
+<style>
+  .story-article {
+    max-width: 740px;
+    margin-inline: auto;
+    padding-inline: 40px;
+  }
+
+  .story-header {
+    display: grid;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+
+  .story-back {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    transition: color 0.2s;
+  }
+  .story-back:hover { color: var(--text); }
+
+  .story-quote-mark {
+    font-family: var(--serif);
+    font-size: 100px;
+    line-height: 0.55;
+    color: var(--sage);
+    opacity: 0.4;
+    user-select: none;
+    margin-top: 32px;
+  }
+
+  .story-snippet {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    quotes: none;
+    max-width: 56ch;
+  }
+
+  .story-attribution {
+    display: grid;
+    gap: 5px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .story-author {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+  }
+  .story-role {
+    font-size: 14px;
+    color: var(--mid);
+  }
+  .story-company {
+    font-size: 13px;
+    color: var(--sage);
+    letter-spacing: 0.03em;
+  }
+
+  .story-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin-block: 48px;
+  }
+
+  .story-footer-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .story-article { padding-inline: 24px; }
+  }
+</style>

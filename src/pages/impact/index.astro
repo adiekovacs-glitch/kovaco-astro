@@ -1,0 +1,171 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const entries = await getCollection('success');
+---
+
+<BaseLayout
+  title="Impact — KovaCo. Consulting"
+  description="Stories from founders and leaders who have worked with KovaCo. Consulting on talent strategy, hiring systems, and senior search."
+>
+
+  <header class="impact-header">
+    <div class="impact-header-inner reveal-group">
+      <p class="page-eyebrow">Impact</p>
+      <h1 class="impact-heading">What it looks like when it works.</h1>
+      <p class="impact-lead">
+        The measure of good hiring work isn't the process — it's what the people
+        and organizations on the other side went on to build.
+      </p>
+    </div>
+  </header>
+
+  <main class="impact-list-section">
+    <div class="impact-list-inner">
+      <ul class="impact-list reveal-group" role="list">
+        {entries.map(entry => (
+          <li class="impact-card">
+            <div class="impact-card__inner">
+              <div class="impact-card__quote-mark" aria-hidden="true">"</div>
+              <blockquote class="impact-card__snippet">
+                {entry.data.snippet}
+              </blockquote>
+              <footer class="impact-card__meta">
+                <p class="impact-card__author">{entry.data.author}</p>
+                <p class="impact-card__role">{entry.data.title}</p>
+                <p class="impact-card__company">{entry.data.company}</p>
+              </footer>
+              <a href={`/impact/${entry.id}`} class="impact-card__cta">
+                Read the full story <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </main>
+
+</BaseLayout>
+
+<style>
+  /* ─── Header ─────────────────────────────────────────────────── */
+  .impact-header {
+    padding: 100px 40px 80px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .impact-header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+  }
+  .impact-heading {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-top: 8px;
+  }
+  .impact-lead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--mid);
+    max-width: 54ch;
+  }
+
+  /* ─── List ───────────────────────────────────────────────────── */
+  .impact-list-section {
+    padding: 80px 40px 100px;
+  }
+  .impact-list-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .impact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr));
+    gap: 2px;
+    list-style: none;
+  }
+
+  /* ─── Card ───────────────────────────────────────────────────── */
+  .impact-card__inner {
+    display: grid;
+    gap: 28px;
+    padding: 52px 48px;
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    height: 100%;
+  }
+
+  .impact-card__quote-mark {
+    font-family: var(--serif);
+    font-size: 72px;
+    line-height: 0.6;
+    color: var(--sage);
+    opacity: 0.5;
+    user-select: none;
+    align-self: start;
+  }
+
+  .impact-card__snippet {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text);
+    quotes: none;
+  }
+
+  .impact-card__meta {
+    display: grid;
+    gap: 4px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+  }
+  .impact-card__author {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+  }
+  .impact-card__role {
+    font-size: 13px;
+    color: var(--mid);
+  }
+  .impact-card__company {
+    font-size: 12px;
+    color: var(--sage);
+    letter-spacing: 0.03em;
+  }
+
+  .impact-card__cta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    align-self: end;
+    justify-self: start;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .impact-card__cta:hover {
+    color: var(--sage);
+    border-color: var(--sage);
+  }
+
+  /* ─── Responsive ─────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .impact-header       { padding: 72px 24px 64px; }
+    .impact-list-section { padding: 64px 24px 80px; }
+    .impact-card__inner  { padding: 40px 32px; }
+  }
+  @media (max-width: 480px) {
+    .impact-card__inner { padding: 32px 24px; }
+  }
+</style>

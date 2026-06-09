@@ -173,6 +173,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ─── Testimonial snippet ─────────────────────────────────── -->
+  <section class="section section--sm testimonial-strip">
+    <div class="container container--lg">
+      <div class="testimonial-strip__inner reveal">
+        <div class="testimonial-strip__quote-mark" aria-hidden="true">"</div>
+        <blockquote class="testimonial-strip__snippet">
+          Adrienne built the tools and systems necessary to support our rapid expansion… She brings a strong, strategic project management lens to her work and excels at building relationships. Businesses expanding across the country would be lucky to have her.
+        </blockquote>
+        <footer class="testimonial-strip__footer">
+          <div class="testimonial-strip__meta">
+            <span class="testimonial-strip__author">Amanda Carling, JD</span>
+            <span class="testimonial-strip__role">Former CEO / Co-Founder · BC First Nations Justice Council</span>
+          </div>
+          <a href="/impact/amanda-carling" class="testimonial-strip__link">Read the full story →</a>
+        </footer>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Articles teaser ─────────────────────────────────────── -->
   <section class="section section--sm articles-teaser">
     <div class="container container--lg">
@@ -297,6 +316,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .specialized__inner p {
     color: var(--color-text-muted);
     max-width: 60ch;
+  }
+
+  /* ─── Testimonial strip ─────────────────────────────────────── */
+  .testimonial-strip__inner {
+    display: grid;
+    gap: 28px;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 52px 56px;
+    border: 1px solid var(--rule);
+    background: var(--color-bg-alt);
+  }
+  .testimonial-strip__quote-mark {
+    font-family: var(--serif);
+    font-size: 72px;
+    line-height: 0.6;
+    color: var(--sage);
+    opacity: 0.5;
+    user-select: none;
+  }
+  .testimonial-strip__snippet {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text);
+    quotes: none;
+  }
+  .testimonial-strip__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .testimonial-strip__author {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .testimonial-strip__role {
+    display: block;
+    font-size: 13px;
+    color: var(--mid);
+  }
+  .testimonial-strip__link {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .testimonial-strip__link:hover { color: var(--sage); border-color: var(--sage); }
+
+  @media (max-width: 720px) {
+    .testimonial-strip__inner { padding: 36px 28px; }
+    .testimonial-strip__footer { flex-direction: column; align-items: flex-start; }
   }
 
   /* ─── Articles teaser ───────────────────────────────────────── */

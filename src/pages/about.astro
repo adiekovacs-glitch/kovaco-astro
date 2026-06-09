@@ -68,6 +68,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </main>
 
+  <!-- TESTIMONIAL -->
+  <div class="testimonial-block reveal">
+    <div class="testimonial-block-inner">
+      <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+      <blockquote class="testimonial-snippet">
+        Adrienne built the tools and systems necessary to support our rapid expansion… She brings a strong, strategic project management lens to her work and excels at building relationships. Businesses expanding across the country would be lucky to have her.
+      </blockquote>
+      <footer class="testimonial-footer">
+        <div class="testimonial-meta">
+          <p class="testimonial-author">Amanda Carling, JD</p>
+          <p class="testimonial-role">Former CEO / Co-Founder</p>
+          <p class="testimonial-company">BC First Nations Justice Council / Canadian Registry of Wrongful Convictions</p>
+        </div>
+        <a href="/impact/amanda-carling" class="testimonial-link">Read the full story →</a>
+      </footer>
+    </div>
+  </div>
+
   <!-- LOCATION -->
   <div class="location-strip">
     <div class="location-inner">
@@ -200,6 +218,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: 100%;
   }
   .equity-text:last-child { margin-bottom: 0; }
+
+  /* ─── Testimonial block ─────────────────────────────────────── */
+  .testimonial-block {
+    padding: 0 40px 80px;
+  }
+  .testimonial-block-inner {
+    max-width: var(--col);
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    padding: 48px 52px;
+    border: 1px solid var(--rule);
+    background: var(--color-bg-alt);
+  }
+  .testimonial-quote-mark {
+    font-family: var(--serif);
+    font-size: 72px;
+    line-height: 0.6;
+    color: var(--sage);
+    opacity: 0.45;
+    user-select: none;
+  }
+  .testimonial-snippet {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 21px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text);
+    quotes: none;
+  }
+  .testimonial-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .testimonial-author {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .testimonial-role { font-size: 13px; color: var(--mid); margin-bottom: 3px; }
+  .testimonial-company { font-size: 12px; color: var(--sage); letter-spacing: 0.03em; }
+  .testimonial-link {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .testimonial-link:hover { color: var(--sage); border-color: var(--sage); }
+
+  @media (max-width: 900px) {
+    .testimonial-block { padding: 0 24px 64px; }
+    .testimonial-block-inner { padding: 36px 28px; }
+    .testimonial-footer { flex-direction: column; align-items: flex-start; }
+  }
 
   /* ─── Location strip ─────────────────────────────────────────── */
   .location-strip {

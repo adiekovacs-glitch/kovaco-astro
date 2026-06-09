@@ -17,4 +17,14 @@ const articles = defineCollection({
   schema: sharedSchema,
 });
 
-export const collections = { playbook, articles };
+const success = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/success' }),
+  schema: z.object({
+    author:  z.string(),
+    title:   z.string(),
+    company: z.string(),
+    snippet: z.string(),
+  }),
+});
+
+export const collections = { playbook, articles, success };
