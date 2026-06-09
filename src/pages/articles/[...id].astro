@@ -41,11 +41,23 @@ const formattedDate = pubDate.toLocaleDateString('en-CA', {
 
     <footer class="article-footer reveal">
       <hr class="article-rule" />
+      <div class="article-engagement">
+        <p class="article-engagement__text">
+          This writing stems from active client engagements. If you are navigating an
+          immediate organizational bottleneck, let's look at it together.
+        </p>
+        <a
+          href="https://calendly.com/hello-kovaco/30min"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Book a Strategic Session <span class="arrow">→</span>
+        </a>
+      </div>
+      <hr class="article-rule" />
       <div class="article-footer-inner">
         <a href="/articles" class="btn-ghost">← Back to articles</a>
-        <a href="https://calendly.com/hello-kovaco/30min" class="btn-primary" target="_blank" rel="noopener">
-          Book an intro call <span class="arrow">→</span>
-        </a>
       </div>
     </footer>
 
@@ -110,6 +122,23 @@ const formattedDate = pubDate.toLocaleDateString('en-CA', {
     border: none;
     border-top: 1px solid var(--rule);
     margin-block: 40px;
+  }
+
+  .article-engagement {
+    display: grid;
+    gap: 24px;
+    padding-block: 40px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+  .article-engagement__text {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--mid);
+    max-width: 52ch;
   }
 
   .article-footer-inner {
