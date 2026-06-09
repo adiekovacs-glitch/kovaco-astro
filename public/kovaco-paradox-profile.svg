@@ -1,47 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
   <!-- Background Canvas matching KovaCo's Warm Off-White Tone -->
-  <rect width="1000" height="450" fill="#F7F4EF"/>
+  <rect width="1000" height="480" fill="#F7F4EF"/>
   
-  <!-- LEFT COLUMN: STRATEGIC ARCHITECTURE -->
-  <g transform="translate(60, 80)">
-    <!-- Column Header -->
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#757570" letter-spacing="2">STRATEGIC ARCHITECTURE</text>
-    
-    <!-- Thin Geometric Accent Line under header -->
-    <line x1="0" y1="15" x2="280" y2="15" stroke="#E2DEC9" stroke-width="1"/>
-    
-    <!-- Bulleted Value Elements -->
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#1A1A1A">
-      <text x="0" y="60"><tspan fill="#4A5D4E" font-weight="700">•</tspan> 15+ Years in Recruitment Systems</text>
-      <text x="0" y="110"><tspan fill="#4A5D4E" font-weight="700">•</tspan> Complex Institutional Scaling</text>
-      <text x="0" y="160"><tspan fill="#4A5D4E" font-weight="700">•</tspan> Data &amp; Assessment Frameworks</text>
+  <!-- DEFINITIONS FOR INTERSECTION CLIPPING (High-End Overlap Effect) -->
+  <defs>
+    <clipPath id="intersectClip">
+      <circle cx="600" cy="240" r="210" />
+    </clipPath>
+  </defs>
+
+  <!-- BACKGROUND GEOMETRY (THE COLLIDING SPHERES) -->
+  <!-- Left Circle: Enterprise Rigor (Fine, elegant outline) -->
+  <circle cx="400" cy="240" r="210" fill="none" stroke="#E2DEC9" stroke-width="1.5" />
+  
+  <!-- Right Circle: Operator Reality (Fine, elegant outline) -->
+  <circle cx="600" cy="240" r="210" fill="none" stroke="#E2DEC9" stroke-width="1.5" />
+
+  <!-- THE INTERSECTION NEXUS LENS (The High-Contrast Value Core) -->
+  <!-- This pulls through only the overlapping geometry and fills it with KovaCo Sage -->
+  <circle cx="400" cy="240" r="210" fill="#4A5D4E" clip-path="url(#intersectClip)" />
+
+  <!-- LAYERED TEXT & LABELS -->
+  
+  <!-- 01. LEFT SIDE: STRATEGIC INFRASTRUCTURE -->
+  <g transform="translate(230, 210)" text-anchor="middle">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#757570" letter-spacing="3">STRATEGIC INFRASTRUCTURE</text>
+    <path d="M-60,12 L60,12" stroke="#E2DEC9" stroke-width="1" />
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#1A1A1A" font-weight="400">
+      <text x="0" y="40">15+ Years in Systems Scaling</text>
+      <text x="0" y="65">Complex Institutional Governance</text>
+      <text x="0" y="90">Data &amp; Assessment Architecture</text>
     </g>
   </g>
 
-  <!-- CENTER SPLINE ARCHITECTURAL ANCHOR -->
-  <!-- Clean, rounded background card for the brand convergence -->
-  <rect x="430" y="70" width="140" height="310" rx="8" ry="8" fill="#4A5D4E"/>
-  
-  <!-- Central Vertical Text -->
-  <text x="500" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="3" transform="rotate(-90 500 225)" text-anchor="middle">KOVACO. TALENT PRACTICE</text>
-
-  <!-- Horizontal Connector Overlay Lines representing integration -->
-  <line x1="360" y1="225" x2="430" y2="225" stroke="#4A5D4E" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <line x1="570" y1="225" x2="640" y2="225" stroke="#4A5D4E" stroke-width="1.5" stroke-dasharray="4,4"/>
-
-  <!-- RIGHT COLUMN: OPERATIONAL REALITY -->
-  <g transform="translate(660, 80)">
-    <!-- Column Header -->
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#757570" letter-spacing="2">OPERATIONAL REALITY</text>
-    
-    <!-- Thin Geometric Accent Line under header -->
-    <line x1="0" y1="15" x2="280" y2="15" stroke="#E2DEC9" stroke-width="1"/>
-    
-    <!-- Bulleted Value Elements -->
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#1A1A1A">
-      <text x="0" y="60"><tspan fill="#4A5D4E" font-weight="700">•</tspan> Founder, Locum Home Inc.</text>
-      <text x="0" y="110"><tspan fill="#4A5D4E" font-weight="700">•</tspan> Bootstrapped &amp; Regulated Ops</text>
-      <text x="0" y="160"><tspan fill="#4A5D4E" font-weight="700">•</tspan> Recruited Co-Founder at Inception</text>
+  <!-- 02. RIGHT SIDE: OPERATIONAL VELOCITY -->
+  <g transform="translate(770, 210)" text-anchor="middle">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#757570" letter-spacing="3">OPERATIONAL VELOCITY</text>
+    <path d="M-60,12 L60,12" stroke="#E2DEC9" stroke-width="1" />
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#1A1A1A" font-weight="400">
+      <text x="0" y="40">Founder, Locum Home Inc.</text>
+      <text x="0" y="65">Bootstrapped Capital Pressures</text>
+      <text x="0" y="90">Recruited Co-Founder at Inception</text>
     </g>
+  </g>
+
+  <!-- 03. CENTER CORE: THE NEXUS BRAND -->
+  <g transform="translate(500, 235)" text-anchor="middle">
+    <!-- Clean Luxury Branding Tracking inside the Dark Sage Intersection -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="4">KOVACO.</text>
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="400" fill="#E2DEC9" letter-spacing="2">TALENT STRATEGY</text>
   </g>
 </svg>
