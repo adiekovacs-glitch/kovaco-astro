@@ -1,10 +1,12 @@
 ---
-title: "The First Ten Hires"
-description: "The first ten people you bring into a company don't just fill roles. They establish the culture, the standards, and the pattern that every subsequent hire will be measured against."
+title: "The First Ten Hires: What Founders Should Plan For That They Almost Never Do"
+description: "Discover why the first ten people you bring into an early-stage company define your culture, scalability, and internal velocity, and how to build a hiring strategy for startups."
+keywords: "hiring strategy for startups, early stage company scaling, founding team recruitment, talent acquisition for founders, executive search vancouver"
+author: "Adrienne Kovacs"
 pubDate: 2026-01-29
 ---
 
-There is no more consequential period in a company's hiring history than the first ten people. Not because of what they produce individually — though that matters — but because of what they establish collectively. The first ten hires set the baseline for what good looks like. They define the informal culture before formal culture has a chance to calcify. They establish the tolerance for ambiguity, the norms around communication, the acceptable level of rigor, and the unspoken understanding of what it means to do well here.
+Designing an intentional hiring strategy for startups is the single most consequential milestone in an early-stage company's history. The first ten people you bring in don't just fill roles — they establish the culture, the standards, and the pattern that every subsequent hire will be measured against. Not because of what they produce individually, though that matters, but because of what they establish collectively. The first ten hires set the baseline for what good looks like. They define the informal culture before formal culture has a chance to calcify. They establish the tolerance for ambiguity, the norms around communication, the acceptable level of rigor, and the unspoken understanding of what it means to do well here.
 
 Every subsequent hire is implicitly compared to that baseline. And because the people doing the comparing are the people you already have, the baseline they set is remarkably durable.
 
@@ -12,17 +14,25 @@ This is worth understanding before you make the first hire — not after.
 
 ---
 
-## The Density Problem
+## Defining the Foundational Blueprint
+
+### Culture as an Operational Default
 
 Early-stage companies have what I think of as a cultural density problem. At ten people, any single person represents ten percent of the company. Their habits, their standards, their way of handling disagreement or ambiguity — these don't stay contained to their own work. They propagate, through example, through proximity, through the informal mentoring that happens in small teams whether you intend it to or not.
 
 A mis-hire at this stage is not just a performance problem. It is a cultural contamination risk. A first engineer who ships fast and cuts corners establishes a norm around acceptable technical debt. A first salesperson who closes aggressively and treats customer success as someone else's problem establishes a norm around what sales culture looks like here. These norms are extraordinarily difficult to reverse once they are in place, because the people who embody them often become the senior members of the team that grows around them.
 
+### How Initial Alignment Mitigates Technical Debt
+
 Founders underestimate this. They treat early hiring as a resourcing problem — we need someone who can do X — rather than as a culture-building problem. The question is not only who can do X. It is who can do X and model what you want this company to become.
+
+When early hires are aligned on standards and working norms from the first day, the structural compounding is positive. When they are not, the resulting misalignment — in codebase quality, in customer communication, in internal expectations — becomes the technical and organizational debt you spend the next two years unwinding.
 
 ---
 
-## The Skills-Character Trade-off Is Real, and It Runs in One Direction
+## Shifting from Capacity to Architecture
+
+### Screening for Generalist Agility
 
 Early-stage hiring is full of advice about hiring for character and training for skill. Like most platitudes, it contains a truth that is frequently misapplied.
 
@@ -30,19 +40,29 @@ The relevant distinction at the early stage is not between hard skills and chara
 
 A founding engineer who doesn't know your specific stack but has strong fundamentals and learns fast is a good bet. A founding engineer who doesn't have the technical depth to make architectural decisions that will structure your codebase for the next several years is not a skills development opportunity — it is a rebuild waiting to happen.
 
+### Compensating Early Teams Equitably
+
 Where character does dominate: the willingness to work in conditions of genuine uncertainty, to make decisions without adequate information, to flag problems rather than paper over them, and to hold a high standard for their own work when nobody is checking. These are not trainable within the timescales of an early-stage company. You either find people who have them, or you find out later that you didn't.
+
+Compensating early hires equitably — acknowledging the risk they are absorbing relative to a later-stage hire — is also part of building a team that stays. Equity conversations, salary benchmarking against market, and honest timelines for what the company can offer as it grows all belong in your first-ten-hires planning, not in the scramble after someone resigns.
 
 ---
 
-## What Early Hires Are Actually Signing Up For
+## Engineering the First Recruiting Engine
+
+### Avoiding Agency Over-Reliance
 
 One of the most consistent causes of early-stage hire failures is a mismatch between what the candidate believed they were joining and what the company actually was.
 
 Founders describe the role in terms of its ceiling — the version of the job that will exist when the company is three times the size it is today. Candidates hear that description and evaluate the opportunity accordingly. Then they join and discover that the actual job today involves a lot of operational grunt work, unclear ownership, frequent context-switching, and a level of ambiguity that is uncomfortable rather than exciting.
 
-Some people thrive in that environment. Many do not, including many who are excellent at their craft in contexts with more structure and support.
+Over-reliance on external agencies at this stage compounds the problem. Agencies are incentivized to close placements, not to surface the mismatches that will cost you the hire in month four. At the first-ten-hires stage, the founder or a deeply trusted senior leader should own the candidate relationship directly — not delegate it to a third party whose understanding of the actual working environment is limited.
+
+### Documenting Selection Criteria from Day One
 
 Before you make an offer to an early hire, describe the actual work that will happen in the first ninety days. Be specific and honest about what is built, what is missing, and what they will be figuring out themselves. If the description causes someone to hesitate, that is information worth having before you sign the contract.
+
+Document your selection criteria before each search begins — not after you have already met a candidate you like. Write down what you are assessing, what a strong answer looks like, and what you are deliberately not weighting. This discipline prevents the retrospective rationalization that turns a founder's gut feeling into a hiring system by default.
 
 ---
 
