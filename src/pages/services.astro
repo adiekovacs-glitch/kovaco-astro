@@ -3,16 +3,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Services — KovaCo. Consulting"
-  description="KovaCo. Consulting services — The Audit, The Build, Advise, and Search. Talent strategy for founders building early- and growth-stage companies."
+  title="Services | Fractional Talent Architecture & Executive Search for Founders"
+  description="Explore KovaCo.'s talent interventions. We provide high-impact executive search, structured hiring audits, and scalable recruitment infrastructure built for growth-stage companies."
 >
 
   <!-- PAGE HEADER -->
   <header class="svc-page-header">
     <p class="page-eyebrow">Services</p>
-    <h1 class="page-heading">Two ways to start. <em>One direction of travel.</em></h1>
-    <p class="page-lead">KovaCo. engagements typically begin with an Audit or a Build. Both are designed to leave the company with something durable: a clear plan, a working system, and a team that knows how to use it. The goal is not to create a more polished hiring process. The goal is to help the company make consistently better hiring decisions as complexity increases.</p>
+    <h1 class="page-heading">Three ways to enter.<br><em>One destination of scale.</em></h1>
+    <p class="page-lead">KovaCo. engagements are designed around your company's immediate velocity and long-term trajectory. Whether deploying a targeted executive search to solve an acute leadership bottleneck, or auditing your baseline architecture to eliminate process drag, the objective remains identical: to equip your organization with data-driven hiring systems that compound as complexity increases.</p>
   </header>
+
+  <!-- STRATEGIC SEARCH (leading conversion wedge) -->
+  <section class="service-section service-section--search reveal" id="search">
+    <div class="service-inner">
+      <div class="service-left">
+        <p class="service-tag">Strategic Intervention</p>
+        <h2 class="service-name">Senior &amp; Specialized Search</h2>
+        <p class="service-tagline">A discrete, standalone engagement to execute the searches that define organizational direction.</p>
+      </div>
+      <div class="service-right">
+        <p class="service-description">A discrete, standalone intervention to execute high-stakes, specialized, and executive leadership searches. Designed for founders who need to fill critical organization-defining roles immediately without committing to broader structural consulting.</p>
+        <p class="service-description">For senior, technical, or market-defining roles — founding engineers, heads of product, revenue leaders, operators with specific domain depth — we run dedicated retained searches. Our network and methodology are built for candidates who are not on job boards and would not respond to mass outreach.</p>
+
+        <div class="service-block">
+          <p class="service-block-label">What's included</p>
+          <ul class="includes-list">
+            <li>Full market map and documented candidate brief</li>
+            <li>Structured assessment process calibrated to your stage and culture</li>
+            <li>End-to-end search management — sourcing, screening, presenting, closing</li>
+            <li>You meet fewer people — and the right ones</li>
+          </ul>
+        </div>
+
+        <div class="service-block">
+          <p class="service-block-label">No engagement required</p>
+          <p class="service-block-text">You do not need an active consulting engagement to deploy our search capabilities. Search is available as a standalone strategic intervention.</p>
+        </div>
+
+        <div class="service-cta">
+          <a href="https://calendly.com/hello-kovaco/30min" class="btn-primary" target="_blank" rel="noopener">
+            Start a search <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- 01 — THE AUDIT -->
   <section class="service-section reveal" id="audit">
@@ -105,21 +141,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ALSO AVAILABLE: ADVISE + SEARCH -->
+  <!-- 03 — ADVISE (dark panel) -->
   <section class="also-available reveal">
-    <div class="also-inner">
+    <div class="also-inner also-inner--single">
       <div>
-        <p class="also-eyebrow">Also available</p>
-        <h3 class="also-title">Advise</h3>
-        <p class="also-text">Ongoing strategic support for founders and people leaders navigating growth, organizational change, and high-stakes hiring decisions. Monthly strategy session, async support, quarterly deep-dives. Typically begins after an Audit or Build engagement. Available by retainer.</p>
-      </div>
-      <div>
-        <p class="also-eyebrow">Also available</p>
-        <h3 class="also-title">Search</h3>
-        <p class="also-text">Senior and specialized searches, executed end-to-end with the rigor of in-house executive recruitment. Available as part of a broader engagement or as a strategic standalone.</p>
+        <p class="also-eyebrow">03 — Advise</p>
+        <h3 class="also-title">Fractional Talent Advisory</h3>
+        <p class="also-text">Ongoing strategic guidance for founders navigating rapid headcount growth, organizational restructuring, or high-velocity scaling thresholds. Monthly strategy sessions, async support between meetings, and quarterly deep-dives on pipeline health, compensation benchmarking, and leadership appointment decisions.</p>
+        <p class="also-text" style="margin-top: 20px;">Typically begins after an Audit or Build engagement. Available by retainer.</p>
       </div>
     </div>
-    <p class="also-note">Both are by inquiry. The best way to start the conversation is an intro call.</p>
+    <p class="also-note">By inquiry. The best entry point is an intro call.</p>
   </section>
 
   <!-- CLOSING CTA -->
@@ -166,6 +198,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   /* ─── Shared service section ─────────────────────────────────── */
+  .service-section--search {
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--sage);
+  }
+
   .service-section {
     padding: 100px 40px;
     border-bottom: 1px solid var(--rule);
@@ -326,6 +363,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
+  }
+  .also-inner--single {
+    grid-template-columns: 1fr;
+    max-width: 720px;
   }
   .also-eyebrow {
     font-size: 11px;
