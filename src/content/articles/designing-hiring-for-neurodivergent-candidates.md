@@ -52,7 +52,7 @@ The unstructured interview — where an interviewer asks whatever comes to mind 
 
 ### Build a Structured Interview Framework
 
-Structured interviews, where every candidate is asked the same questions in the same order and responses are scored against a defined rubric, dramatically improve both predictive validity and equity. They reduce the effect of social performance as a proxy for competence.
+Structured interviews, where every candidate is asked the same questions in the same order and responses are scored against a defined rubric, dramatically improve both predictive validity and equity. They reduce the effect of social performance as a proxy for competence. This is the foundation of [building scalable hiring capability](https://kovaco.ca) that holds up as the organization grows.
 
 Give candidates the interview questions in advance. This is not about lowering the bar — it is about giving people the preparation time they need to demonstrate what they actually know. A candidate who thinks carefully about a question and gives a considered answer in writing or in conversation is more predictable as a hire than someone who produced a polished response on the spot.
 
@@ -80,7 +80,7 @@ Many neurodivergent candidates will not disclose their diagnosis, particularly i
 
 ### Respond to Accommodation Requests Practically
 
-If someone does disclose and request accommodation, respond practically and promptly. The accommodation conversation should not feel like a special case. It should feel like a company that has thought about this.
+If someone does disclose and request accommodation, respond practically and promptly. The accommodation conversation should not feel like a special case. It should feel like a company that has thought about this. Running a [structured talent audit](https://kovaco.ca) of your existing process is often the clearest way to identify where accommodation gaps live before a candidate surfaces them for you.
 
 ---
 

@@ -26,7 +26,7 @@ Most startup hiring teams keep almost no records. They have a general sense of w
 
 ### Designing Structured Scorecards for Founders
 
-Structured scorecards — filled out by each interviewer immediately after the conversation, before the debrief — create a record of the reasoning that produced a decision. They protect the company. They also force clarity: interviewers who have to write down a score and a rationale are less likely to carry vague impressions into a group discussion where social dynamics do the actual work.
+Structured scorecards — filled out by each interviewer immediately after the conversation, before the debrief — create a record of the reasoning that produced a decision. They protect the company. They also force clarity: interviewers who have to write down a score and a rationale are less likely to carry vague impressions into a group discussion where social dynamics do the actual work. For senior and critical-function roles, pairing scorecards with [specialized executive search](https://kovaco.ca) methodology raises the signal-to-noise ratio further still.
 
 ---
 
@@ -40,7 +40,7 @@ Series A companies often have six or seven people involved in hiring across diff
 
 ### Building Repeatable Assessment Systems
 
-The fix is not complicated. Write down your process. Train everyone involved on it. Debrief using a common framework. Review outcomes regularly and ask whether the process predicted what it was supposed to predict.
+The fix is not complicated. Write down your process. Train everyone involved on it. Debrief using a common framework. Review outcomes regularly and ask whether the process predicted what it was supposed to predict. Founders who find themselves revisiting the same hiring problems repeatedly are often best served by bringing in [fractional talent advisory](https://kovaco.ca) support to build and stress-test the system before it has to operate at scale.
 
 ---
 
