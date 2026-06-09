@@ -6,7 +6,7 @@ author: "Adrienne Kovacs"
 pubDate: 2026-01-29
 ---
 
-Designing an intentional hiring strategy for startups is the single most consequential milestone in an early-stage company's history. The first ten people you bring in don't just fill roles — they establish the culture, the standards, and the pattern that every subsequent hire will be measured against. Not because of what they produce individually, though that matters, but because of what they establish collectively. The first ten hires set the baseline for what good looks like. They define the informal culture before formal culture has a chance to calcify. They establish the tolerance for ambiguity, the norms around communication, the acceptable level of rigor, and the unspoken understanding of what it means to do well here.
+Designing an [intentional hiring strategy for startups](https://kovaco.ca) is the single most consequential milestone in an early-stage company's history. The first ten people you bring in don't just fill roles — they establish the culture, the standards, and the pattern that every subsequent hire will be measured against. Not because of what they produce individually, though that matters, but because of what they establish collectively. The first ten hires set the baseline for what good looks like. They define the informal culture before formal culture has a chance to calcify. They establish the tolerance for ambiguity, the norms around communication, the acceptable level of rigor, and the unspoken understanding of what it means to do well here.
 
 Every subsequent hire is implicitly compared to that baseline. And because the people doing the comparing are the people you already have, the baseline they set is remarkably durable.
 
@@ -56,13 +56,13 @@ One of the most consistent causes of early-stage hire failures is a mismatch bet
 
 Founders describe the role in terms of its ceiling — the version of the job that will exist when the company is three times the size it is today. Candidates hear that description and evaluate the opportunity accordingly. Then they join and discover that the actual job today involves a lot of operational grunt work, unclear ownership, frequent context-switching, and a level of ambiguity that is uncomfortable rather than exciting.
 
-Over-reliance on external agencies at this stage compounds the problem. Agencies are incentivized to close placements, not to surface the mismatches that will cost you the hire in month four. At the first-ten-hires stage, the founder or a deeply trusted senior leader should own the candidate relationship directly — not delegate it to a third party whose understanding of the actual working environment is limited.
+Over-reliance on external agencies at this stage compounds the problem. Agencies are incentivized to close placements, not to surface the mismatches that will cost you the hire in month four. At the first-ten-hires stage, the founder or a deeply trusted senior leader should own the candidate relationship directly — not delegate it to a third party whose understanding of the actual working environment is limited. When outside support is warranted, a [specialized executive search](https://kovaco.ca) partner embedded in the business context will surface fit mismatches an agency never will.
 
 ### Documenting Selection Criteria from Day One
 
 Before you make an offer to an early hire, describe the actual work that will happen in the first ninety days. Be specific and honest about what is built, what is missing, and what they will be figuring out themselves. If the description causes someone to hesitate, that is information worth having before you sign the contract.
 
-Document your selection criteria before each search begins — not after you have already met a candidate you like. Write down what you are assessing, what a strong answer looks like, and what you are deliberately not weighting. This discipline prevents the retrospective rationalization that turns a founder's gut feeling into a hiring system by default.
+Document your selection criteria before each search begins — not after you have already met a candidate you like. Write down what you are assessing, what a strong answer looks like, and what you are deliberately not weighting. This discipline prevents the retrospective rationalization that turns a founder's gut feeling into a hiring system by default. Building that [talent audit infrastructure](https://kovaco.ca) early is the difference between a recruiting engine and a series of one-off decisions.
 
 ---
 
