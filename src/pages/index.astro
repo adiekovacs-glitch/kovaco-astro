@@ -237,6 +237,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: var(--space-2);
   }
 
+  /* Tighten hero → services gap (global .section is too generous here) */
+  .hero    { padding-block-end:   clamp(var(--space-8), 4vw, var(--space-12)); }
+  .services { padding-block-start: clamp(var(--space-8), 4vw, var(--space-12)); }
+
   /* ─── Services ───────────────────────────────────────────────── */
   .services .container {
     display: grid;
