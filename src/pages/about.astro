@@ -58,27 +58,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           experience of building a company from the ground up.
         </p>
 
-        <!-- ─── Intersection diagram ─────────────────────────────── -->
-        <div class="intersection-diagram">
-          <div class="intersection-col intersection-col--left">
-            <p class="intersection-col__label">Strategic Architecture</p>
-            <ul class="intersection-col__list">
-              <li>15+ Years in Recruitment Systems</li>
-              <li>Complex Institutional Scaling</li>
-              <li>Data &amp; Assessment Frameworks</li>
-            </ul>
-          </div>
-          <div class="intersection-bridge">
-            <span class="intersection-bridge__label">KovaCo. Talent Practice</span>
-          </div>
-          <div class="intersection-col intersection-col--right">
-            <p class="intersection-col__label">Operational Reality</p>
-            <ul class="intersection-col__list">
-              <li>Founder, Locum Home Inc.</li>
-              <li>Bootstrapped &amp; Regulated Operations</li>
-              <li>Recruited Co-Founder at Inception</li>
-            </ul>
-          </div>
+        <!-- ─── Paradox profile diagram ───────────────────────────── -->
+        <div class="paradox-diagram">
+          <img
+            src="/kovaco-paradox-profile.svg"
+            alt="The KovaCo Paradox Profile Blueprint: Displaying the convergence of Adrienne Kovacs' 15-year strategic institutional scaling framework and real-world operational founder background."
+            class="paradox-diagram__img"
+            loading="eager"
+          />
         </div>
 
         <p class="about-text">
@@ -349,75 +336,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .about-list--pillars li::before { display: none; }
 
-  /* ─── Intersection diagram ───────────────────────────────────── */
-  .intersection-diagram {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 0;
-    align-items: stretch;
-    margin: 48px 0;
-    border: 1px solid var(--rule);
-  }
-
-  .intersection-col {
-    padding: 36px 32px;
-  }
-  .intersection-col--left {
-    border-right: 1px solid var(--rule);
-  }
-  .intersection-col--right {
-    border-left: 1px solid var(--rule);
-  }
-
-  .intersection-col__label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--sage);
-    margin-bottom: 20px;
-  }
-  .intersection-col__list {
-    list-style: none;
-    display: grid;
-    gap: 10px;
-  }
-  .intersection-col__list li {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--mid);
-    padding-left: 14px;
-    position: relative;
-  }
-  .intersection-col__list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 5px;
-    height: 1px;
-    background: var(--sage);
-    opacity: 0.6;
-  }
-
-  .intersection-bridge {
+  /* ─── Paradox profile diagram ───────────────────────────────── */
+  .paradox-diagram {
+    margin-block: 48px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px 28px;
-    background: var(--text);
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
+    align-items: center;
+    width: 100%;
   }
-  .intersection-bridge__label {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--sage-light);
-    white-space: nowrap;
-    transform: rotate(180deg);
+  .paradox-diagram__img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   /* ─── Pull quote ─────────────────────────────────────────────── */
@@ -595,22 +527,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .testimonial-block-inner { padding: 36px 28px; }
     .testimonial-footer  { flex-direction: column; align-items: flex-start; }
 
-    /* Stack diagram on mobile */
-    .intersection-diagram {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-    }
-    .intersection-col--left  { border-right: none; border-bottom: 1px solid var(--rule); }
-    .intersection-col--right { border-left: none;  border-top: 1px solid var(--rule); }
-    .intersection-bridge {
-      writing-mode: horizontal-tb;
-      padding: 16px 32px;
-    }
-    .intersection-bridge__label { transform: none; }
   }
 
   @media (max-width: 480px) {
     .page-heading { font-size: 36px; }
-    .intersection-col { padding: 28px 24px; }
   }
 </style>
