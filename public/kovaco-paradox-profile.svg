@@ -10,44 +10,49 @@
   </defs>
 
   <!-- BACKGROUND GEOMETRY (THE COLLIDING SPHERES) -->
-  <!-- Left Circle: Enterprise Rigor (Fine, elegant outline) -->
-  <circle cx="400" cy="240" r="210" fill="none" stroke="#E2DEC9" stroke-width="1.5" />
+  <!-- Left Circle: Enterprise Rigor (Increased line weight and opacity for architectural balance) -->
+  <circle cx="400" cy="240" r="210" fill="none" stroke="#D1CCA8" stroke-width="2.5" opacity="0.9" />
   
-  <!-- Right Circle: Operator Reality (Fine, elegant outline) -->
-  <circle cx="600" cy="240" r="210" fill="none" stroke="#E2DEC9" stroke-width="1.5" />
+  <!-- Right Circle: Operator Reality -->
+  <circle cx="600" cy="240" r="210" fill="none" stroke="#D1CCA8" stroke-width="2.5" opacity="0.9" />
 
-  <!-- THE INTERSECTION NEXUS LENS (The High-Contrast Value Core) -->
-  <!-- This pulls through only the overlapping geometry and fills it with KovaCo Sage -->
-  <circle cx="400" cy="240" r="210" fill="#4A5D4E" clip-path="url(#intersectClip)" />
+  <!-- THE INTERSECTION NEXUS LENS (Translucent Multiplied Lens to lighten visual mass) -->
+  <g clip-path="url(#intersectClip)">
+    <circle cx="400" cy="240" r="210" fill="#4A5D4E" opacity="0.88" style="mix-blend-mode: multiply;" />
+  </g>
 
   <!-- LAYERED TEXT & LABELS -->
   
   <!-- 01. LEFT SIDE: STRATEGIC INFRASTRUCTURE -->
-  <g transform="translate(230, 210)" text-anchor="middle">
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#757570" letter-spacing="3">STRATEGIC INFRASTRUCTURE</text>
-    <path d="M-60,12 L60,12" stroke="#E2DEC9" stroke-width="1" />
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#1A1A1A" font-weight="400">
-      <text x="0" y="40">15+ Years in Systems Scaling</text>
-      <text x="0" y="65">Complex Institutional Governance</text>
-      <text x="0" y="90">Data &amp; Assessment Architecture</text>
+  <g transform="translate(210, 210)" text-anchor="middle">
+    <!-- Increased header weight to lock in visual grounding -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#42423E" letter-spacing="3">STRATEGIC INFRASTRUCTURE</text>
+    <path d="M-70,14 L70,14" stroke="#D1CCA8" stroke-width="1.5" />
+    <!-- Darkened and weighted body font to match the lens balance -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#000000" font-weight="500">
+      <text x="0" y="45">15+ Years in Systems Scaling</text>
+      <text x="0" y="72">Complex Institutional Governance</text>
+      <text x="0" y="99">Data &amp; Assessment Architecture</text>
     </g>
   </g>
 
   <!-- 02. RIGHT SIDE: OPERATIONAL VELOCITY -->
-  <g transform="translate(770, 210)" text-anchor="middle">
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#757570" letter-spacing="3">OPERATIONAL VELOCITY</text>
-    <path d="M-60,12 L60,12" stroke="#E2DEC9" stroke-width="1" />
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#1A1A1A" font-weight="400">
-      <text x="0" y="40">Founder, Locum Home Inc.</text>
-      <text x="0" y="65">Bootstrapped Capital Pressures</text>
-      <text x="0" y="90">Recruited Co-Founder at Inception</text>
+  <g transform="translate(790, 210)" text-anchor="middle">
+    <!-- Increased header weight to lock in visual grounding -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#42423E" letter-spacing="3">OPERATIONAL VELOCITY</text>
+    <path d="M-70,14 L70,14" stroke="#D1CCA8" stroke-width="1.5" />
+    <!-- Darkened and weighted body font to match the lens balance -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#000000" font-weight="500">
+      <text x="0" y="45">Founder, Locum Home Inc.</text>
+      <text x="0" y="72">Bootstrapped Capital Pressures</text>
+      <text x="0" y="99">Recruited Co-Founder at Inception</text>
     </g>
   </g>
 
   <!-- 03. CENTER CORE: THE NEXUS BRAND -->
   <g transform="translate(500, 235)" text-anchor="middle">
     <!-- Clean Luxury Branding Tracking inside the Dark Sage Intersection -->
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="4">KOVACO.</text>
-    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="400" fill="#E2DEC9" letter-spacing="2">TALENT STRATEGY</text>
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" letter-spacing="4">KOVACO.</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#F7F4EF" letter-spacing="2">TALENT STRATEGY</text>
   </g>
 </svg>
