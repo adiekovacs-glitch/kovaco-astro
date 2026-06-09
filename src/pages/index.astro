@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="KovaCo. Consulting — Talent Strategy for Founders"
-  description="KovaCo. partners with early-stage founders to build hiring systems that scale. Talent audits, fractional recruiting, and senior search for companies that can't afford the wrong hire."
+  title="KovaCo. | Talent Strategy & Recruitment Architecture for Founders"
+  description="High-impact talent strategy practice by Adrienne Kovacs. We design custom recruitment infrastructure, structured interview systems, and executive search for scaling companies."
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -38,15 +38,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </h1>
         <div class="hero__body">
           <p>
-            <strong>KovaCo.</strong> — <em>koh·VAH·co</em> — is a talent strategy consultancy
-            for founders who are serious about building. We work with early-stage
-            companies to design hiring systems, fill critical roles, and turn
-            recruiting into a repeatable, strategic advantage.
+            KovaCo. is a talent strategy practice designed for founders navigating
+            early- and growth-stage scale. We partner with building teams to engineer
+            disciplined hiring architecture, execute critical executive searches, and
+            design robust talent infrastructure that compounds as your enterprise grows.
           </p>
-          <p>
-            We don't send you a stack of résumés. We learn your business,
-            pressure-test your process, and bring you the people your next
-            chapter actually requires.
+          <p class="hero__body-accent">
+            Build internal hiring capability before rapid growth exposes the absence of it.
           </p>
         </div>
         <a href="https://calendly.com/hello-kovaco/30min" class="btn btn--primary hero__cta" target="_blank" rel="noopener">
@@ -62,6 +60,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section services">
     <div class="container container--lg">
 
+      <div class="services__header reveal">
+        <span class="label">The Long-Term Infrastructure</span>
+      </div>
+
       <div class="service reveal">
         <div class="service__header">
           <span class="label">01</span>
@@ -69,15 +71,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="service__body">
           <p>
-            We start where most companies have gaps they can't yet see. A
-            KovaCo. talent audit maps your current hiring process end-to-end —
-            sourcing channels, interview structure, offer cadence, and
-            onboarding — and surfaces the exact points where speed, quality,
-            or candidate experience are breaking down.
-          </p>
-          <p>
-            You leave with a clear-eyed diagnosis and a prioritised action plan
-            you can execute with or without us.
+            A structured, objective review of how your company currently hires
+            to locate process drag and structural vulnerabilities.
           </p>
           <p class="service__impact">
             <strong>Impact:</strong> Founders typically cut time-to-hire by
@@ -96,15 +91,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="service__body">
           <p>
-            When you're ready to hire at volume, a clear process matters more
-            than hustle. We embed as your fractional recruiting function —
-            writing scorecards, training hiring managers, building sourcing
-            pipelines, and running full-cycle search — until your team is
-            equipped to own it internally.
-          </p>
-          <p>
-            This is not staff augmentation. We're designing the infrastructure
-            that keeps working long after we step back.
+            Designing the custom hiring capability your team runs long-term —
+            including structured interview frameworks and assessment scorecards.
           </p>
           <p class="service__impact">
             <strong>Impact:</strong> Clients who complete the Build engagement
@@ -124,15 +112,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="service__body">
           <p>
-            Ongoing talent strategy for founders who want a thinking partner,
-            not a vendor. We meet regularly to review pipeline health, pressure-
-            test compensation decisions, prepare for board-level hiring
-            conversations, and keep your talent strategy aligned with your
-            business trajectory.
-          </p>
-          <p>
-            Think of it as a fractional VP of Talent — without the full-time
-            overhead.
+            Ongoing strategic guidance for founders navigating high-stakes
+            organizational design, scaling thresholds, and leadership appointments.
           </p>
           <p class="service__impact">
             <strong>Impact:</strong> Advise clients report stronger retention
@@ -146,29 +127,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <hr class="container container--lg" />
-
-  <!-- ─── Specialized Searches ─────────────────────────────────── -->
-  <section class="section section--sm specialized">
+  <!-- ─── Search wedge ──────────────────────────────────────────── -->
+  <section class="search-wedge reveal">
     <div class="container container--lg">
-      <div class="specialized__inner reveal-group">
-        <span class="label">Senior &amp; Specialized Search</span>
-        <h2 class="specialized__headline">
-          The hire that changes everything deserves more than a keyword search.
-        </h2>
-        <p>
-          For senior, technical, or market-defining roles — founding engineers,
-          heads of product, revenue leaders, operators with specific domain
-          depth — we run dedicated retained searches. Our network and our
-          methodology are built for candidates who are not on job boards and
-          would not respond to a mass outreach.
-        </p>
-        <p>
-          Every search comes with a market map, a documented candidate brief,
-          and a structured assessment process calibrated to your stage and
-          culture. You meet fewer people — and the right ones.
-        </p>
-        <a href="https://calendly.com/hello-kovaco/30min" class="btn btn--ghost" target="_blank" rel="noopener">Start a search →</a>
+      <div class="search-wedge__inner">
+        <div class="search-wedge__flag">
+          <span class="search-wedge__flag-label">Strategic Intervention</span>
+        </div>
+        <div class="search-wedge__content">
+          <h2 class="search-wedge__title">Senior &amp; Specialized Search</h2>
+          <p class="search-wedge__body">
+            For organizations facing immediate, critical leadership bottlenecks.
+            We undertake discrete, standalone executive and hyper-specialized
+            searches to find the exact personnel required to define your business
+            direction. You do not need an active consulting engagement to deploy
+            our search capabilities.
+          </p>
+          <a
+            href="https://calendly.com/hello-kovaco/30min"
+            class="search-wedge__cta btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            Start a search <span class="arrow">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -239,6 +222,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: 62ch;
   }
 
+  .hero__body-accent {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--text) !important;
+    border-left: 2px solid var(--sage);
+    padding-left: var(--space-6);
+    margin-top: var(--space-2);
+  }
+
   .hero__cta {
     align-self: start;
     margin-top: var(--space-2);
@@ -300,22 +293,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: var(--space-1);
   }
 
-  /* ─── Specialized ────────────────────────────────────────────── */
-  .specialized__inner {
+  /* ─── Services header label ──────────────────────────────────── */
+  .services__header {
+    padding-bottom: var(--space-2);
+  }
+
+  /* ─── Search wedge ───────────────────────────────────────────── */
+  .search-wedge {
+    background: var(--text);
+    color: var(--bg);
+    padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+  }
+
+  .search-wedge__inner {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .search-wedge__flag {
+    padding-top: 6px;
+  }
+  .search-wedge__flag-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    border-top: 1px solid rgba(181,196,176,0.3);
+    padding-top: 12px;
+  }
+
+  .search-wedge__content {
     display: grid;
     gap: var(--space-6);
-    max-width: 720px;
   }
 
-  .specialized__headline {
-    font-size: var(--text-3xl);
-    line-height: 1.1;
-    margin-top: var(--space-2);
+  .search-wedge__title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--bg);
   }
 
-  .specialized__inner p {
-    color: var(--color-text-muted);
-    max-width: 60ch;
+  .search-wedge__body {
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgba(245,242,237,0.75);
+    max-width: 58ch;
+  }
+
+  .search-wedge__cta {
+    align-self: start;
+    justify-self: start;
+    background: var(--sage);
+    color: var(--bg);
+  }
+  .search-wedge__cta:hover { background: var(--sage-light); }
+
+  @media (max-width: 768px) {
+    .search-wedge__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
   }
 
   /* ─── Testimonial strip ─────────────────────────────────────── */
