@@ -1,0 +1,125 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('articles');
+  return entries.map((entry) => ({
+    params: { id: entry.id },
+    props:  { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate } = entry.data;
+
+const formattedDate = pubDate.toLocaleDateString('en-CA', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+---
+
+<BaseLayout title={`${title} — KovaCo. Consulting`} description={description}>
+  <article class="container--article section">
+
+    <header class="article-header reveal-group">
+      <a href="/articles" class="article-back">← Articles</a>
+      <h1 class="article-title">{title}</h1>
+      <div class="article-meta">
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        <span class="article-meta-sep" aria-hidden="true">·</span>
+        <span>KovaCo. Consulting</span>
+      </div>
+      <p class="article-description">{description}</p>
+    </header>
+
+    <hr class="article-rule" />
+
+    <div class="prose reveal">
+      <Content />
+    </div>
+
+    <footer class="article-footer reveal">
+      <hr class="article-rule" />
+      <div class="article-footer-inner">
+        <a href="/articles" class="btn-ghost">← Back to articles</a>
+        <a href="https://calendly.com/hello-kovaco/30min" class="btn-primary" target="_blank" rel="noopener">
+          Book an intro call <span class="arrow">→</span>
+        </a>
+      </div>
+    </footer>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .container--article {
+    max-width: 740px;
+    margin-inline: auto;
+    padding-inline: 40px;
+  }
+
+  .article-header {
+    display: grid;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .article-back {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    align-self: start;
+    transition: color 0.2s;
+  }
+  .article-back:hover { color: var(--text); }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-top: 8px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--mid);
+  }
+  .article-meta-sep { color: var(--rule); }
+
+  .article-description {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--mid);
+    font-style: italic;
+    font-family: var(--serif);
+    border-left: 2px solid var(--sage);
+    padding-left: 24px;
+    max-width: 58ch;
+    margin-top: 8px;
+  }
+
+  .article-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin-block: 40px;
+  }
+
+  .article-footer-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .container--article { padding-inline: 24px; }
+  }
+</style>

@@ -1,0 +1,191 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="KovaCo. Consulting">
+      <span class="nav-logo-kova">Kova</span><span class="nav-logo-co">Co.</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/"         class:list={[{ active: isActive('/') }]}>Home</a></li>
+      <li><a href="/about"    class:list={[{ active: isActive('/about') }]}>About</a></li>
+      <li><a href="/services" class:list={[{ active: isActive('/services') }]}>Services</a></li>
+      <li><a href="/articles" class:list={[{ active: isActive('/articles') }]}>Articles</a></li>
+      <li><a href="/contact"  class:list={[{ active: isActive('/contact') }]}>Contact</a></li>
+      <li>
+        <a href="https://calendly.com/hello-kovaco/30min" class="btn-nav" target="_blank" rel="noopener">
+          Book an intro call
+        </a>
+      </li>
+    </ul>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/services">Services</a>
+  <a href="/articles">Articles</a>
+  <a href="/contact">Contact</a>
+  <a href="https://calendly.com/hello-kovaco/30min" class="btn-nav" target="_blank" rel="noopener">
+    Book an intro call
+  </a>
+</div>
+
+<style>
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--nav-h);
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-inner {
+    max-width: var(--max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1;
+    color: var(--text);
+  }
+  .nav-logo-kova { color: var(--text); }
+  .nav-logo-co   { color: var(--sage); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--text); }
+
+  /* CTA button */
+  .nav-links a.btn-nav,
+  .nav-mobile a.btn-nav {
+    display: inline-block;
+    padding: 10px 22px;
+    background: var(--text);
+    color: var(--sage);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(143,160,136,0.18);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .nav-links a.btn-nav:hover,
+  .nav-mobile a.btn-nav:hover {
+    background: var(--sage);
+    color: var(--text);
+    border-color: var(--sage);
+  }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--text);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* Mobile overlay */
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0; bottom: 0;
+    background: var(--bg);
+    padding: 48px 40px;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 99;
+  }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text);
+  }
+  .nav-mobile .btn-nav { align-self: flex-start; margin-top: 8px; }
+
+  @media (max-width: 900px) {
+    .nav-inner { padding: 0 24px; }
+    .nav-links  { display: none; }
+    .nav-toggle { display: flex; }
+  }
+</style>
+
+<script>
+  function initNav() {
+    const toggle    = document.querySelector('.nav-toggle') as HTMLButtonElement | null;
+    const mobileNav = document.querySelector('.nav-mobile') as HTMLElement | null;
+    if (!toggle || !mobileNav) return;
+
+    toggle.addEventListener('click', () => {
+      const open = toggle.classList.toggle('open');
+      mobileNav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Run on first load and after every view transition
+  initNav();
+  document.addEventListener('astro:after-swap', initNav);
+</script>

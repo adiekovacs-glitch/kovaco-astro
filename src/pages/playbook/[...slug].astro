@@ -1,0 +1,77 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('playbook');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props:  { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate } = entry.data;
+
+const formattedDate = pubDate.toLocaleDateString('en-CA', {
+  year:  'numeric',
+  month: 'long',
+  day:   'numeric',
+});
+---
+
+<BaseLayout title={`${title} — KovaCo. Playbook`} description={description}>
+  <article class="container container--md section">
+
+    <header class="playbook-header reveal-group">
+      <a href="/playbook" class="label link back-link">← Playbook</a>
+      <h1 class="playbook-title">{title}</h1>
+      <p class="playbook-meta">
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+      </p>
+      <p class="playbook-description">{description}</p>
+    </header>
+
+    <hr />
+
+    <div class="prose reveal">
+      <Content />
+    </div>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .playbook-header {
+    display: grid;
+    gap: var(--space-4);
+    padding-bottom: var(--space-10);
+  }
+
+  .back-link {
+    align-self: start;
+  }
+
+  .playbook-title {
+    font-size: var(--text-4xl);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-top: var(--space-2);
+  }
+
+  .playbook-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    max-width: none;
+  }
+
+  .playbook-description {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-6);
+    max-width: 58ch;
+  }
+</style>

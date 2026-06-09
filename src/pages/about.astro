@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About — KovaCo. Consulting"
+  description="About Adrienne Kovacs — founder of KovaCo. Consulting, a talent strategy practice for founders building early- and growth-stage companies."
+>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="reveal-group">
+        <p class="page-eyebrow">About</p>
+        <h1 class="page-heading">I'm Adrienne.<br><em>I run KovaCo.</em></h1>
+      </div>
+      <div class="page-header-portrait reveal">
+        <img
+          src="/adrienne-kovacs.jpg"
+          alt="Adrienne Kovacs, founder of KovaCo. Consulting"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <main class="about-body-wrap">
+    <div class="about-content">
+
+      <!-- The work -->
+      <div class="about-section reveal">
+        <p class="section-heading">The work</p>
+        <p class="about-text">KovaCo. is a talent strategy practice for founders making the hires that will define their company. I work with early- and growth-stage companies to design the recruitment systems they don't yet have, run the senior searches that matter most, and build hiring practices that compound over time.</p>
+        <p class="about-text">My background spans executive recruitment, talent strategy, and founder-led company building. I've spent over fifteen years in human resources and recruitment across some of the most complex hiring environments in British Columbia — including public healthcare, post-secondary, and Indigenous-led organizations — while also building and launching a company of my own.</p>
+        <p class="about-text">Alongside that work, I founded and built Locum Home Inc., a workforce housing platform serving healthcare professionals on temporary assignments. Building a company while advising others on hiring fundamentally changed how I think about recruitment, growth, and operational reality. KovaCo. is where those experiences converge.</p>
+      </div>
+
+      <!-- The path -->
+      <div class="about-section reveal">
+        <p class="section-heading">The path here</p>
+        <p class="about-text">After completing a university degree in dramatic arts, I found my way into recruitment almost unexpectedly through the Staff Finders program at the University of British Columbia. What started as an unexpected career turn quickly became work I genuinely loved — complex, human, strategic, and deeply operational all at once.</p>
+        <p class="about-text">That experience led me back to school for a post-graduate diploma in Human Resources Management at Camosun College. From there, I moved into healthcare HR and spent nearly a decade learning the foundational mechanics of the field — disability management, attendance management, compensation analysis, and HR analytics — before moving fully into recruitment and executive search.</p>
+        <p class="about-text">At Interior Health, I led recruitment for physicians and senior medical leaders across the entire region, including the International Medical Graduate program for the province. I sat on provincial committees shaping rural recruitment strategy, and I was recognized by the Interior Health Board of Directors for the creativity I brought to the work — a body of recruitment videos, animated content, and storytelling that turned a fairly traditional process into something people actually wanted to be part of.</p>
+        <p class="about-text">From there I moved into a provincial role with the Health Employers Association of BC, then into the BC First Nations Justice Council where I built a recruitment strategy from the ground up to help rapidly stand up Indigenous Justice Centres across the province. Most recently, I led executive recruitment at Simon Fraser University as Associate Director, Talent Acquisition &amp; Executive Recruitment.</p>
+      </div>
+
+      <!-- How I think -->
+      <div class="about-section reveal">
+        <p class="section-heading">How I think about the work</p>
+
+        <div class="pull-quote">
+          <p>The companies that get hiring right build a real practice around it — a clear point of view, a fair and rigorous process, and the discipline to keep doing it well as they grow.</p>
+        </div>
+
+        <p class="about-text">Hiring is the most consequential decision a company makes, repeated dozens of times. Weak hiring systems rarely fail immediately. They fail under scale — when inconsistent interviews, unclear decision-making, and reactive hiring begin compounding across teams.</p>
+        <p class="about-text">The companies that get hiring right aren't the ones with the biggest budgets or the most clever job posts. They're the ones that build a real practice around it: a clear point of view about who they are, a fair and rigorous process, and the discipline to keep doing it well as they grow.</p>
+        <p class="about-text">Most of my work is about helping companies become that. Sometimes that means stepping in and running a senior search myself. Most of the time it means designing the system, training the team, and leaving them better at hiring than they were before I arrived.</p>
+      </div>
+
+      <!-- Equity block -->
+      <div class="equity-block reveal">
+        <p class="equity-label">On equity &amp; accessibility</p>
+        <p class="equity-text">Equitable hiring isn't a service line at KovaCo. — it's a default. I bring ongoing training in Indigenous Cultural Safety, direct experience designing recruitment for an Indigenous-led organization expanding across BC, and a working understanding of how to build hiring systems that are accessible by design rather than retrofitted later.</p>
+        <p class="equity-text">The companies I partner with are ones that take this seriously. The ones that don't, won't be a fit.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LOCATION -->
+  <div class="location-strip">
+    <div class="location-inner">
+      <p class="location-label">Location</p>
+      <p class="location-text">Based in Vernon, in the Okanagan, on the unceded territory of the syilx Okanagan people. Most work is remote, with travel for engagements that call for it.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <p class="about-cta-headline">Book an intro call.</p>
+    <a href="https://calendly.com/hello-kovaco/30min" class="btn-primary" target="_blank" rel="noopener">
+      Get in touch <span class="arrow">→</span>
+    </a>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ─── Page header ────────────────────────────────────────────── */
+  .page-header {
+    padding: 100px 40px 80px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .page-heading {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.5vw, 74px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-top: 32px;
+  }
+  .page-heading em { font-style: italic; }
+
+  .page-header-portrait {
+    position: relative;
+    background: rgba(143,160,136,0.08);
+    border: 1px solid var(--rule);
+    aspect-ratio: 4 / 5;
+    max-height: 620px;
+    justify-self: end;
+    width: 100%;
+    overflow: hidden;
+  }
+  .page-header-portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* ─── Body content ───────────────────────────────────────────── */
+  .about-body-wrap {
+    padding: 100px 40px;
+  }
+  .about-content {
+    max-width: var(--col);
+    margin: 0 auto;
+  }
+  .about-section {
+    margin-bottom: 72px;
+  }
+  .about-section:last-of-type { margin-bottom: 0; }
+
+  .section-heading {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .about-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--mid);
+    margin-bottom: 24px;
+  }
+  .about-text:last-child { margin-bottom: 0; }
+  .about-text strong { color: var(--text); font-weight: 500; }
+
+  /* ─── Pull quote ─────────────────────────────────────────────── */
+  .pull-quote {
+    border-left: 2px solid var(--sage);
+    padding: 4px 0 4px 32px;
+    margin: 48px 0;
+  }
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--text);
+  }
+
+  /* ─── Equity block ───────────────────────────────────────────── */
+  .equity-block {
+    background: var(--text);
+    color: var(--bg);
+    padding: 52px;
+    margin: 72px 0;
+  }
+  .equity-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    margin-bottom: 24px;
+  }
+  .equity-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(245,242,237,0.85);
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .equity-text:last-child { margin-bottom: 0; }
+
+  /* ─── Location strip ─────────────────────────────────────────── */
+  .location-strip {
+    padding: 64px 40px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .location-inner {
+    max-width: var(--col);
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+  }
+  .location-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    white-space: nowrap;
+  }
+  .location-text {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--mid);
+    max-width: 100%;
+  }
+
+  /* ─── Closing CTA ────────────────────────────────────────────── */
+  .about-cta {
+    padding: 120px 40px;
+    text-align: center;
+  }
+  .about-cta-headline {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 44px;
+  }
+
+  /* ─── Responsive ─────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .page-header { padding: 72px 24px 64px; }
+    .page-header-inner { grid-template-columns: 1fr; gap: 48px; }
+    .page-header-portrait {
+      width: min(100%, 360px);
+      max-height: 460px;
+    }
+    .about-body-wrap { padding: 72px 24px; }
+    .location-strip  { padding: 64px 24px; }
+    .location-inner  { flex-direction: column; gap: 8px; }
+    .about-cta       { padding: 80px 24px; }
+    .equity-block    { padding: 36px 28px; }
+  }
+
+  @media (max-width: 480px) {
+    .page-heading { font-size: 36px; }
+  }
+</style>

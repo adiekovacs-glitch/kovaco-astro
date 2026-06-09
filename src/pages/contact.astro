@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact — KovaCo. Consulting"
+  description="Get in touch with KovaCo. Consulting. Book an intro call or send a message to start the conversation about your hiring strategy."
+>
+
+  <header class="contact-header">
+    <div class="contact-header-inner reveal-group">
+      <p class="page-eyebrow">Contact</p>
+      <h1 class="contact-heading">Start the conversation.</h1>
+      <p class="contact-lead">
+        The best way to begin is a 30-minute intro call. If you'd prefer to
+        send a note first, the form below reaches Adrienne directly.
+      </p>
+      <a
+        href="https://calendly.com/hello-kovaco/30min"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
+        Book an intro call <span class="arrow">→</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="contact-form-section">
+    <div class="contact-form-inner">
+
+      <div class="form-aside reveal">
+        <p class="form-aside-label">Or send a message</p>
+        <p class="form-aside-text">
+          Share a bit about where you are and what you're working on.
+          Adrienne reads every message and responds within two business days.
+        </p>
+        <div class="form-aside-detail">
+          <span class="form-aside-detail-label">Email</span>
+          <a href="mailto:hello@kovaco.ca" class="form-aside-detail-link">hello@kovaco.ca</a>
+        </div>
+        <div class="form-aside-detail">
+          <span class="form-aside-detail-label">Location</span>
+          <span>Based in Vernon, BC — Partnering with Founders Globally.</span>
+        </div>
+      </div>
+
+      <form
+        class="contact-form reveal"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        novalidate
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="form-row">
+          <label class="form-label" for="name">Name</label>
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="email">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@company.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="organization">Organization</label>
+          <input
+            class="form-input"
+            type="text"
+            id="organization"
+            name="organization"
+            placeholder="Company name and stage"
+            autocomplete="organization"
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="message">Message</label>
+          <textarea
+            class="form-input form-textarea"
+            id="message"
+            name="message"
+            placeholder="What are you trying to figure out? Where is your hiring process right now?"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="form-submit btn-primary">
+          Send message <span class="arrow">→</span>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ─── Header ─────────────────────────────────────────────────── */
+  .contact-header {
+    padding: 100px 40px 80px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .contact-header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    gap: 28px;
+    max-width: 680px;
+  }
+  .contact-heading {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-top: 8px;
+  }
+  .contact-lead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--mid);
+    max-width: 52ch;
+  }
+
+  /* ─── Form section ───────────────────────────────────────────── */
+  .contact-form-section {
+    padding: 100px 40px;
+  }
+  .contact-form-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* Aside */
+  .form-aside {
+    display: grid;
+    gap: 24px;
+    padding-top: 4px;
+  }
+  .form-aside-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+  }
+  .form-aside-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--mid);
+    max-width: 100%;
+  }
+  .form-aside-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .form-aside-detail-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(28,28,28,0.35);
+  }
+  .form-aside-detail,
+  .form-aside-detail span {
+    font-size: 15px;
+    color: var(--mid);
+  }
+  .form-aside-detail-link {
+    font-size: 15px;
+    color: var(--text);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    align-self: start;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .form-aside-detail-link:hover { color: var(--sage); border-color: var(--sage); }
+
+  /* Form */
+  .contact-form {
+    display: grid;
+    gap: 32px;
+  }
+  .form-row {
+    display: grid;
+    gap: 8px;
+  }
+  .form-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(28,28,28,0.5);
+  }
+  .form-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 0;
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-input::placeholder { color: rgba(28,28,28,0.3); }
+  .form-input:focus { border-color: var(--sage); }
+  .form-textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.65;
+  }
+  .form-submit { align-self: start; cursor: pointer; }
+
+  /* ─── Responsive ─────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .contact-header      { padding: 72px 24px 64px; }
+    .contact-form-section { padding: 72px 24px; }
+    .contact-form-inner  { grid-template-columns: 1fr; gap: 56px; }
+  }
+</style>
