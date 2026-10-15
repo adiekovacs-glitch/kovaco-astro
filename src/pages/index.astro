@@ -159,18 +159,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- ─── Testimonial snippet ─────────────────────────────────── -->
   <section class="section section--sm testimonial-strip">
     <div class="container container--lg">
-      <div class="testimonial-strip__inner reveal">
-        <div class="testimonial-strip__quote-mark" aria-hidden="true">"</div>
-        <blockquote class="testimonial-strip__snippet">
-          Adrienne built the tools and systems necessary to support our rapid expansion… She brings a strong, strategic project management lens to her work and excels at building relationships. Businesses expanding across the country would be lucky to have her.
-        </blockquote>
-        <footer class="testimonial-strip__footer">
-          <div class="testimonial-strip__meta">
-            <span class="testimonial-strip__author">Amanda Carling, JD</span>
-            <span class="testimonial-strip__role">Former CEO / Co-Founder · BC First Nations Justice Council</span>
-          </div>
-          <a href="/impact/amanda-carling" class="testimonial-strip__link">Read the full story →</a>
-        </footer>
+      <div class="testimonial-strip__grid reveal-group">
+
+        <div class="testimonial-strip__inner">
+          <div class="testimonial-strip__quote-mark" aria-hidden="true">"</div>
+          <blockquote class="testimonial-strip__snippet">
+            Adrienne built the tools and systems necessary to support our rapid expansion… She brings a strong, strategic project management lens to her work and excels at building relationships. Businesses expanding across the country would be lucky to have her.
+          </blockquote>
+          <footer class="testimonial-strip__footer">
+            <div class="testimonial-strip__meta">
+              <span class="testimonial-strip__author">Amanda Carling, JD</span>
+              <span class="testimonial-strip__role">Former CEO / Co-Founder · BC First Nations Justice Council</span>
+            </div>
+            <a href="/impact/amanda-carling" class="testimonial-strip__link">Read the full story →</a>
+          </footer>
+        </div>
+
+        <div class="testimonial-strip__inner">
+          <div class="testimonial-strip__quote-mark" aria-hidden="true">"</div>
+          <blockquote class="testimonial-strip__snippet">
+            Adrienne is the rare kind of professional who elevates every room she walks into. Her dedicated work ethic and adaptive problem-solving make her an invaluable partner.
+          </blockquote>
+          <footer class="testimonial-strip__footer">
+            <div class="testimonial-strip__meta">
+              <span class="testimonial-strip__author">Rob Landry</span>
+              <span class="testimonial-strip__role">Regional Manager Digital Health · Interior Health Authority</span>
+            </div>
+            <a href="/impact/rob-landry" class="testimonial-strip__link">Read the full story →</a>
+          </footer>
+        </div>
+
       </div>
     </div>
   </section>
@@ -367,11 +385,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   /* ─── Testimonial strip ─────────────────────────────────────── */
+  .testimonial-strip__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
+    gap: 2px;
+  }
   .testimonial-strip__inner {
     display: grid;
     gap: 28px;
-    max-width: 820px;
-    margin: 0 auto;
     padding: 52px 56px;
     border: 1px solid var(--rule);
     background: var(--color-bg-alt);
@@ -429,7 +450,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .testimonial-strip__link:hover { color: var(--sage); border-color: var(--sage); }
 
   @media (max-width: 720px) {
-    .testimonial-strip__inner { padding: 36px 28px; }
+    .testimonial-strip__inner  { padding: 36px 28px; }
     .testimonial-strip__footer { flex-direction: column; align-items: flex-start; }
   }
 
