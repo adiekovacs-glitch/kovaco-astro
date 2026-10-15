@@ -12,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "name": "KovaCo. Consulting",
     "url": "https://www.kovaco.ca",
     "logo": "https://www.kovaco.ca/favicon.svg",
-    "description": "Talent strategy consultancy for founders. Hiring audits, fractional recruiting, and senior search for early-stage companies.",
+    "description": "Talent strategy consultancy for founders. Hiring audits, fractional recruiting, and scalable hiring infrastructure for early-stage companies.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Vernon",
@@ -23,8 +23,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       "@type": "Country",
       "name": "Canada"
     },
-    "serviceType": ["Talent Strategy", "Recruitment Consulting", "Fractional Recruiting", "Executive Search"],
-    "knowsAbout": ["Talent Acquisition", "Hiring Process Design", "Startup Recruiting", "Executive Search"],
+    "serviceType": ["Talent Strategy", "Recruitment Consulting", "Fractional Recruiting"],
+    "knowsAbout": ["Talent Acquisition", "Hiring Process Design", "Startup Recruiting"],
     "sameAs": []
   })} />
 
@@ -40,8 +40,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>
             KovaCo. is a talent strategy practice designed for founders navigating
             early- and growth-stage scale. We partner with building teams to engineer
-            disciplined hiring architecture, execute critical executive searches, and
-            design robust talent infrastructure that compounds as your enterprise grows.
+            disciplined hiring architecture and design robust talent infrastructure
+            that compounds as your enterprise grows.
           </p>
           <p class="hero__body-accent">
             Build internal hiring capability before rapid growth exposes the absence of it.
@@ -124,35 +124,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="/services" class="link service__link">See the work →</a>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ─── Search wedge ──────────────────────────────────────────── -->
-  <section class="search-wedge reveal">
-    <div class="container container--lg">
-      <div class="search-wedge__inner">
-        <div class="search-wedge__flag">
-          <span class="search-wedge__flag-label">Strategic Intervention</span>
-        </div>
-        <div class="search-wedge__content">
-          <h2 class="search-wedge__title">Senior &amp; Specialized Search</h2>
-          <p class="search-wedge__body">
-            For organizations facing immediate, critical leadership bottlenecks.
-            We undertake discrete, standalone executive and hyper-specialized
-            searches to find the exact personnel required to define your business
-            direction. You do not need an active consulting engagement to deploy
-            our search capabilities.
-          </p>
-          <a
-            href="https://calendly.com/hello-kovaco/30min"
-            class="search-wedge__cta btn-primary"
-            target="_blank"
-            rel="noopener"
-          >
-            Start a search <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -318,70 +289,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* ─── Services header label ──────────────────────────────────── */
   .services__header {
     padding-bottom: var(--space-2);
-  }
-
-  /* ─── Search wedge ───────────────────────────────────────────── */
-  .search-wedge {
-    background: var(--text);
-    color: var(--bg);
-    padding-block: clamp(var(--space-16), 8vw, var(--space-24));
-  }
-
-  .search-wedge__inner {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: var(--space-16);
-    align-items: start;
-  }
-
-  .search-wedge__flag {
-    padding-top: 6px;
-  }
-  .search-wedge__flag-label {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--sage-light);
-    border-top: 1px solid rgba(181,196,176,0.3);
-    padding-top: 12px;
-  }
-
-  .search-wedge__content {
-    display: grid;
-    gap: var(--space-6);
-  }
-
-  .search-wedge__title {
-    font-family: var(--serif);
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 400;
-    line-height: 1.08;
-    letter-spacing: -0.01em;
-    color: var(--bg);
-  }
-
-  .search-wedge__body {
-    font-size: 17px;
-    line-height: 1.75;
-    color: rgba(245,242,237,0.75);
-    max-width: 58ch;
-  }
-
-  .search-wedge__cta {
-    align-self: start;
-    justify-self: start;
-    background: var(--sage);
-    color: var(--bg);
-  }
-  .search-wedge__cta:hover { background: var(--sage-light); }
-
-  @media (max-width: 768px) {
-    .search-wedge__inner {
-      grid-template-columns: 1fr;
-      gap: var(--space-8);
-    }
   }
 
   /* ─── Testimonial strip ─────────────────────────────────────── */
